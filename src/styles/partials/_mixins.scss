@@ -1,0 +1,8 @@
+@use "../../styles/partials/typography" as *;
+
+@mixin large-header {
+    font-family: $primary-font;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+}
