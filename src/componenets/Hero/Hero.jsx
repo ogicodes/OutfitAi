@@ -11,8 +11,8 @@ export default function Hero() {
     <div className="hero">
       <Header />
       <Canvas>
-        <Environment files={'../../../public/nebula.hdr'} background />
-        {/* <Environment preset="forest" background backgroundBlurriness={0.5} /> */}
+        {/* <Environment files={'../../../public/nebula.hdr'} background /> */}
+        <Environment preset="forest" background backgroundBlurriness={0.5} />
         <LandingLights />
         <HeroModel />
         <OrbitControls enableZoom={false} />
