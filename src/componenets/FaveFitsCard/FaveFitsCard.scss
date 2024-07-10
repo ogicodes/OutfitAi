@@ -1,0 +1,23 @@
+.fave-fits {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 84vh;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    &__canvas {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__title {
+        font-size: 1.2em;
+    }
+
+}

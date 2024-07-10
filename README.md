@@ -66,8 +66,7 @@ The app will make API calls to Chat GPT for the prompted outfit generation featu
 - Login/Register
 - Dashboard/Closet
 - Outfit Generation Page
-- About
-- Contact Us
+- About/Contact Us
 - Settings
 
 ### Mockups
