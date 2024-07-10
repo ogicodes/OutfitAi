@@ -5,7 +5,7 @@
 .header {
   z-index: 2;
   position: absolute;
-  width: 100%;
+  width: 25%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -50,7 +50,7 @@
 
   &__item-border {
     background: rgb(64,52,148);
-    background: linear-gradient(90deg, rgba(64,52,148,1) 28%, rgba(253,29,29,1) 69%, rgba(252,176,69,1) 100%);
+    background: linear-gradient(90deg, rgb(215, 212, 233) 28%, rgb(91, 142, 209) 69%, rgb(69, 96, 252) 100%);
     border-radius: 30px;
     margin-bottom: 2rem;
   }

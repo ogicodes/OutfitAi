@@ -18,21 +18,21 @@ export default function Header() {
         </a>
       </div>
       <div className="header__menu-dt">
-      <Link className="header__link" to={"/dashboard"}>
+      <Link className="header__link" to={"/login"}>
           <div className="header__item-border">
             <div className="header__nav-container">
               <p className="header__nav">LOGIN</p>
             </div>
           </div>
         </Link>
-        <Link className="header__link" to={"/dashboard"}>
+        <Link className="header__link" to={"/register"}>
           <div className="header__item-border">
             <div className="header__nav-container">
               <p className="header__nav">REGISTER</p>
             </div>
           </div>
         </Link>
-        <Link className="header__link" to={"/dashboard"}>
+        <Link className="header__link" to={"/login"}>
           <div className="header__item-border">
             <div className="header__nav-container">
               <p className="header__nav">ABOUT US</p>
@@ -41,7 +41,7 @@ export default function Header() {
         </Link>
       </div>
       <Menu right>
-        <Link to={"/dashboard"}>
+        <Link to={"/login"}>
           <div className="header__item-border">
             <div className="header__nav-container">
               <p className="header__nav">LOGIN</p>
@@ -53,7 +53,7 @@ export default function Header() {
             </div>
           </div>
         </Link>
-        <Link to={"/dashboard"}>
+        <Link to={"/register"}>
           <div className="header__item-border">
             <div className="header__nav-container">
               <p className="header__nav">REGISTER</p>
@@ -65,7 +65,7 @@ export default function Header() {
             </div>
           </div>
         </Link>
-        <Link to={"/dashboard"}>
+        <Link to={"/login"}>
           <div className="header__item-border">
             <div className="header__nav-container">
               <p className="header__nav">ABOUT US</p>

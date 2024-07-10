@@ -1,0 +1,130 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.dash-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  &__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  &__search {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title {
+    @include mobile-subheader;
+    padding: 1.5rem 1rem;
+
+  }
+
+  &__link {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+
+$menu-background: #373a47;
+$menu-hover: #a90000;
+$menu-text: #b8b7ad;
+$menu-text-hover: #ffffff;
+$cross-background: #bdc3c7;
+$burger-button-size: 30px;
+$burger-button-color: #373a47;
+
+.bm-burger-button {
+  position: fixed;
+  width: $burger-button-size;
+  height: $burger-button-size;
+  right: 20px;
+  top: 20px;
+
+  .bm-burger-bars {
+    background: $burger-button-color;
+  }
+
+  .bm-burger-bars-hover {
+    background: $menu-hover;
+  }
+}
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+
+  .bm-cross {
+    background: $cross-background;
+  }
+}
+
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  /* Customize the width for a right-side menu */
+  width: 600px;
+  right: 0;
+}
+
+.bm-menu {
+  background: $menu-background;
+  padding: 2em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-morph-shape {
+  fill: $menu-background;
+}
+
+.bm-item-list {
+  color: $menu-text;
+  padding: 0.8em;
+}
+
+.bm-item {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: $menu-text;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $menu-text-hover;
+  }
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .bm-burger-button {
+    width: $burger-button-size;
+    height: $burger-button-size;
+    right: 20px;
+    top: 20px;
+  }
+
+  .bm-menu {
+    font-size: 1em;
+    padding: 2em 1em 0;
+  }
+
+  .bm-item {
+    font-size: 1.2em;
+  }
+}
+

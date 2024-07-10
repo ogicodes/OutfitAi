@@ -11,11 +11,10 @@ export default function Hero() {
     <div className="hero">
       <Header />
       <Canvas>
-        {/* <Environment files={'../../../public/nebula.hdr'} background /> */}
-        <Environment preset="forest" background backgroundBlurriness={0.5} />
+        <Environment files={'../../../public/kloppenheim_07_puresky_1k.hdr'} background />
         <LandingLights />
         <HeroModel />
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={true} />
       </Canvas>
     </div>
   );

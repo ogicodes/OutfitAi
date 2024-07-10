@@ -19,29 +19,36 @@
 
 @mixin large-header {
     font-family: $primary-font;
-    font-size: 350px;
-    line-height: 325px;
+    font-size: 21.875rem;
+    line-height: 20.3125rem;
     font-weight: 600;
 }
 
 @mixin large-subheader {
     font-family: $primary-font;
-    font-size: 100px;
-    line-height: 100px;
+    font-size: 6.25rem;
+    line-height: 6.25rem;
     font-weight: 500;
 }
 
 @mixin mobile-header {
     font-family: $primary-font;
-    font-size: 50px;
-    line-height: 50px;
+    font-size: 3.125rem;
+    line-height: 3.125rem;
     font-weight: 600;
 }
 
 @mixin mobile-subheader {
     font-family: $primary-font;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
     font-weight: 600;
+}
+
+@mixin mobile-body {
+  font-family: $primary-font;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  font-weight: 200;
 }
 
