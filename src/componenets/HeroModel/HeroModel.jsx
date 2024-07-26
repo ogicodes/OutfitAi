@@ -1,9 +1,10 @@
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
+import GLBMan from '../../../public/GLman.glb'
 
 export default function HeroModel() {
-    const { scene } = useGLTF('../../../public/GLman.glb');
+    const { scene } = useGLTF(GLBMan);
     const ref = useRef();
   
     useFrame(() => {
