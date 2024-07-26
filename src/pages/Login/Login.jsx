@@ -13,7 +13,7 @@ export default function Login({ setUser }) {
     e.preventDefault();
     setError("");
     try {
-      const response = await axios.post("http://localhost:8080/auth", { email, password });
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/auth`, { email, password });
       localStorage.setItem("token", response.data.token);
       setUser(response.data.user);
       navigate("/dashboard");

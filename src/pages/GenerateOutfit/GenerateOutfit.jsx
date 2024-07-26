@@ -19,7 +19,7 @@ export default function GenerateOutfit() {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "http://localhost:8080/generate",
+        `${import.meta.env.VITE_API_URL}/generate`,
         { prompt },
         {
           headers: { "x-auth-token": token },
@@ -51,7 +51,7 @@ export default function GenerateOutfit() {
     try {
       const token = localStorage.getItem('token');
 
-      const response = await axios.post('http://localhost:8080/randomfit/save', { name, clothingItems }, { headers: { 'x-auth-token': token } })
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/randomfit/save`, { name, clothingItems }, { headers: { 'x-auth-token': token } })
       alert('outfit saved successfully!')
     } catch (error) {
       alert('Failed to save outfit.')
