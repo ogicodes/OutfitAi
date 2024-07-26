@@ -17,7 +17,7 @@ export default function FaveOutfits() {
       }
 
       const response = await axios.get(
-        "http://localhost:8080/dashboard/outfits",
+        `${import.meta.env.VITE_API_URL}/dashboard/outfits`,
         {
           headers: {
             "x-auth-token": token,

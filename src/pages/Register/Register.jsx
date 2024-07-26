@@ -14,7 +14,7 @@ export default function Register({ setUser }) {
     e.preventDefault();
     setError("");
     try {
-      const response = await axios.post("http://localhost:8080/register", { name, email, password });
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/register`, { name, email, password });
       localStorage.setItem("token", response.data.token);
       setUser(response.data.user);
       navigate("/dashboard");

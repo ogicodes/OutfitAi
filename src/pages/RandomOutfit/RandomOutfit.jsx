@@ -14,7 +14,7 @@ export default function RandomOutfit() {
 
   async function fetchOutfit() {
     try {
-      const response = await axios.get("http://localhost:8080/randomfit");
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/randomfit`);
       setOutfit(response.data);
       setError(null)
     } catch (error) {
@@ -24,7 +24,7 @@ export default function RandomOutfit() {
 
   async function fetchRandomItem(category) {
     try {
-      const response = await axios.get(`http://localhost:8080/randomfit/randomclothing?category=${category}`);
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/randomfit/randomclothing?category=${category}`);
       setOutfit(prevOutfit => ({
         ...prevOutfit,
         [category === 'Tops' ? 'top' : category === 'Bottoms' ? 'bottom' : null]: response.data
@@ -37,7 +37,7 @@ export default function RandomOutfit() {
 
   async function fetchRandomShoes() {
     try {
-      const response = await axios.get("http://localhost:8080/randomfit/randomshoes");
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/randomfit/randomshoes`);
       setOutfit(prevOutfit => ({
         ...prevOutfit,
         leftShoe: response.data.leftShoe,
@@ -66,7 +66,7 @@ export default function RandomOutfit() {
     try {
       const token = localStorage.getItem('token');
 
-      const response = await axios.post('http://localhost:8080/randomfit/save', { name, clothingItems }, { headers: { 'x-auth-token': token } })
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/randomfit/save`, { name, clothingItems }, { headers: { 'x-auth-token': token } })
       alert('outfit saved successfully!')
     } catch (error) {
       alert('Failed to save outfit.')

@@ -15,7 +15,7 @@ export default function Closet() {
         setError('User not authenticated')
         return
       }
-      const response = await axios.get("http://localhost:8080/dashboard", {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/dashboard`, {
         headers: { 
           'x-auth-token': token, 
         },

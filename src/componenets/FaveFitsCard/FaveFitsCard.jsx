@@ -23,7 +23,7 @@ export default function FavefitsCard({
       try {
         const token = localStorage.getItem("token");
         await axios.delete(
-          `http://localhost:8080/randomfit/delete/${outfit.OutfitID}`,
+          `${import.meta.env.VITE_API_URL}/randomfit/delete/${outfit.OutfitID}`,
           {
             headers: { "x-auth-token": token },
           }
